@@ -1,0 +1,74 @@
+{
+  "name": "pr-summarizer-bot",
+  "version": "0.1.0",
+  "description": "GitHub App that automatically generates AI-powered summaries of pull requests",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Poolchaos/pr-summarizer-bot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Poolchaos/pr-summarizer-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Poolchaos/pr-summarizer-bot/issues"
+  },
+  "keywords": [
+    "probot",
+    "github",
+    "github-app",
+    "pull-request",
+    "ai",
+    "llm",
+    "code-review"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon --exec 'node -r ts-node/register' src/index.ts",
+    "start": "probot run ./lib/index.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "probot": "^12.3.1",
+    "@octokit/rest": "^19.0.11",
+    "langchain": "^0.1.25",
+    "openai": "^4.28.0",
+    "@anthropic-ai/sdk": "^0.17.0",
+    "ioredis": "^5.3.2",
+    "yaml": "^2.3.4",
+    "joi": "^17.12.1",
+    "correlation-id": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@types/jest": "^29.5.12",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^27.6.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "nock": "^13.5.1",
+    "nodemon": "^3.0.3",
+    "husky": "^8.0.3",
+    "semantic-release": "^23.0.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "smee-client": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
