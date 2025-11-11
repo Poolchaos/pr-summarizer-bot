@@ -152,33 +152,31 @@ npm run lint:fix
 
 ## Deployment
 
-### Vercel (Recommended)
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed deployment instructions including:
 
+- GitHub App registration and configuration
+- Environment setup for different platforms
+- Redis deployment options
+- Production security checklist
+- Monitoring and troubleshooting
+
+### Quick Deploy Options
+
+**Vercel:**
 ```bash
-# Install Vercel CLI
 npm i -g vercel
-
-# Deploy
 vercel --prod
 ```
 
-### Railway
-
+**Railway:**
 ```bash
-# Install Railway CLI
 npm i -g @railway/cli
-
-# Deploy
 railway up
 ```
 
-### Docker
-
+**Docker:**
 ```bash
-# Build image
 docker build -t pr-summarizer-bot .
-
-# Run container
 docker run -p 3000:3000 --env-file .env pr-summarizer-bot
 ```
 
