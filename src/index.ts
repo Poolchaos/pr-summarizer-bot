@@ -17,17 +17,17 @@ export = (app: Probot): void => {
 
   // Handle pull_request.opened event
   app.on('pull_request.opened', (context) => {
-    handlePullRequestEvent(context, config);
+    void handlePullRequestEvent(context, config);
   });
 
   // Handle pull_request.synchronize event (new commits pushed)
   app.on('pull_request.synchronize', (context) => {
-    handlePullRequestEvent(context, config);
+    void handlePullRequestEvent(context, config);
   });
 
   // Handle pull_request.reopened event
   app.on('pull_request.reopened', (context) => {
-    handlePullRequestEvent(context, config);
+    void handlePullRequestEvent(context, config);
   });
 
   // Health check endpoint

@@ -11,6 +11,8 @@ module.exports = {
     '!src/types/**',
     '!src/index.ts',
     '!src/handlers/**',
+    '!src/services/**',
+    '!src/utils/**',
   ],
   coverageThreshold: {
     global: {

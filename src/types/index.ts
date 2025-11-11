@@ -30,7 +30,8 @@ export interface BotConfig {
 }
 
 export interface AuditLogEntry {
-  timestamp: string;
+  timestamp: number;
+  correlationId: string;
   actor: string;
   action: string;
   resource: string;
@@ -38,8 +39,10 @@ export interface AuditLogEntry {
 }
 
 export interface RateLimitStatus {
-  allowed: boolean;
-  retryAfter?: number;
+  limit: number;
+  remaining: number;
+  reset: number;
+  isLimited: boolean;
 }
 
 export type LLMProvider = 'openai' | 'anthropic';
